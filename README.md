@@ -47,3 +47,5 @@ Ensuite il faut push l'image:
 ```bash
 docker push myregistry.azurecr.io/myimage:v1
 ```
+
+Il faut ensuite dans le `Dockerfile` de l'image du front indiquer dans `FROM` le ecr d'Azure pour qu'il utilise cette image.
