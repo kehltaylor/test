@@ -29,3 +29,21 @@ La requete suivante nous permet d'appeller la _serverless function_:
 Pour ensuite sauvegarder:
 
 ![3](misc/4.png)
+
+
+## Registry
+
+`az acr login -n myregistry`
+
+Il faut ensuite obtenir le server name du registry `az acr list`
+
+Tag l'image en local:
+```bash
+docker tag myimage:local myregistry.azurecr.io/myimage:v1
+```
+
+Ensuite il faut push l'image:
+
+```bash
+docker push myregistry.azurecr.io/myimage:v1
+```
